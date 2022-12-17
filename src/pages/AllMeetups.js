@@ -22,7 +22,6 @@ function AllMeetupsPage() {
       </section>
     );
   }
-
     return (
         <section>
             <h1>All Meetups</h1>
