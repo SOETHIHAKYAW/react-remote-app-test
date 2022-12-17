@@ -12,7 +12,7 @@ function Layout(props) {
 
             <Container>
             <Row>
-                <Col>
+                <Col className={classes.col}>
                     <div>
                         <Link to='/'>
                         <button className={classes.button}>
