@@ -8,13 +8,19 @@ function MainNavigation() {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>AllMeetups</Link>
+                        <button className={classes.button}>
+                            <Link to='/'>AllMeetups</Link>
+                        </button>
                     </li>
                     <li>
-                    <Link to='/new-meetup'>Add New Meetup</Link>
+                        <button className={classes.button}>
+                            <Link to='/new-meetup'>New Meetup</Link>
+                        </button>
                     </li>
                     <li>
-                    <Link to='/favorites'>Favorites</Link>
+                        <button className={classes.button}>
+                            <Link to='/favorites'>Favorites</Link>
+                        </button>
                     </li>
                 </ul>
             </nav>
