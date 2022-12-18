@@ -1,19 +1,37 @@
 import MeetupItemList from "../components/meetups/MeetupItemList";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 function AllMeetupsPage() {
         //state     //function
   const [isLoading,setIsLoading] = useState(true);
   const [loadedMeetups,setLoadedMeetups] = useState([]);
 
-  fetch(
-    'https://react-meetup-ec4a4-default-rtdb.firebaseio.com/meetup.json'
-  ).then((response)=>{
-    return response.json();
-  }).then((data)=>{
-    setIsLoading(false);
-    setLoadedMeetups(data);
-  });
+  useEffect(()=>{
+
+    setIsLoading(true);
+
+    fetch(
+      'https://react-meetup-ec4a4-default-rtdb.firebaseio.com/meetup.json'
+    ).then((response)=>{
+      return response.json();
+    }).then((data)=>{
+
+      const meetupList = [];
+
+      for(const key in data){
+        const meetup = {
+          id : key,
+          ...data[key]
+        }
+        meetupList.push(meetup);
+      }
+
+      setIsLoading(false);
+      setLoadedMeetups(meetupList);
+      
+    });
+    //depedency
+  },[]);
 
   if (isLoading) {
     return (

@@ -1,8 +1,7 @@
 import classes from './Layout.module.css';
 import MainNavigation from './MainNavigation';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Layout(props) {
+function Layout(props){
     return (
         
         <div>
@@ -10,7 +9,7 @@ function Layout(props) {
 
             <main className={classes.main}>
                 {props.children}
-                 </main>
+             </main>
         </div>
     );
     

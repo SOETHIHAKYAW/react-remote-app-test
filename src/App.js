@@ -5,6 +5,7 @@ import NewMeetupPage from './pages/NewMeetup';
 import Layout from './components/layout/Layout';
 
 function App() {
+
   return ( 
 
     <Layout>
@@ -14,6 +15,7 @@ function App() {
         <Route path='/favorites' element={<FavoritesPage></FavoritesPage>}></Route>
       </Routes>
     </Layout>
+
     );
 }
 
