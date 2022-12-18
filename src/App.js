@@ -39,7 +39,7 @@ function App() {
       </Routes>
       {showButton && (
         <button onClick={scrollToTop} className="back-to-top">
-          &#8679;
+        &#8679;
         </button>
       )}
     </Layout>
