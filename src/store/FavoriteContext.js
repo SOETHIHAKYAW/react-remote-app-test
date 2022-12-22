@@ -8,7 +8,7 @@ const FavoritesContext = createContext({
     itemIsFavorite: (meetupId) => {},
 });
 
-function FavoritesContextProvider(props) {
+export function FavoritesContextProvider(props) {
 
     const [userFavorites,setUserFavorites] = useState([]);
 
@@ -33,7 +33,7 @@ function FavoritesContextProvider(props) {
         totalFavorites:userFavorites.length,
         addFavorite: addFavoriteHandler,
         removeFavorite: removeFavoriteHandler,
-        itemIsVavorite: itemIsFavoriteHandler,
+        itemIsFavorite: itemIsFavoriteHandler,
     };
 
     return (
@@ -43,4 +43,4 @@ function FavoritesContextProvider(props) {
     );
     
 }
-export default FavoritesContextProvider;
+export default FavoritesContext;
